@@ -10,19 +10,12 @@
     "./package.json": "./package.json"
   },
   "files": [
-    "index.js"
-  ],
-  "workspaces": [
-    "packages/*"
+    "index.js",
+    "convert.js",
+    "scale.js"
   ],
   "scripts": {
-    "test": "node test.js",
-    "test:all": "npm test --workspaces --if-present && npm test",
-    "publish:all": "npm publish --workspaces && npm publish"
-  },
-  "dependencies": {
-    "@audio/note-convert": "^1.0.0",
-    "@audio/note-scale": "^1.0.0"
+    "test": "node test.js"
   },
   "devDependencies": {
     "tst": "^9.4.0"

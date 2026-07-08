@@ -1,6 +1,6 @@
 // Scales and pitch snapping — the tune-snap / tuner substrate.
 
-import { hzToMidi, midiToHz } from '@audio/note-convert'
+import { hzToMidi, midiToHz } from './convert.js'
 
 export const SCALES = {
 	chromatic: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],

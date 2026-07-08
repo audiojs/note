@@ -1,4 +1,4 @@
-// @audio/note — music-theory primitives umbrella.
+// @audio/note — Hz ↔ MIDI ↔ name/cents, scale tables, pitch snapping.
 
-export * from '@audio/note-convert'
-export * from '@audio/note-scale'
+export * from './convert.js'
+export * from './scale.js'
