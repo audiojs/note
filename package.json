@@ -1,6 +1,6 @@
 {
   "name": "@audio/note",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "sideEffects": false,
   "description": "Music-theory primitives — Hz ↔ MIDI ↔ name, cents, scales, pitch snapping",
@@ -39,5 +39,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/audiojs/note.git"
-  }
+  },
+  "funding": "https://github.com/sponsors/audiojs"
 }
