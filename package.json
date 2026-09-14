@@ -3,16 +3,20 @@
   "version": "1.0.2",
   "type": "module",
   "sideEffects": false,
-  "description": "Music-theory primitives \u2014 Hz \u2194 MIDI \u2194 name, cents, scales, pitch snapping",
+  "description": "Music-theory primitives — Hz ↔ MIDI ↔ name, cents, scales, pitch snapping",
   "main": "index.js",
   "exports": {
-    ".": "./index.js",
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
     "./package.json": "./package.json"
   },
   "files": [
     "index.js",
     "convert.js",
-    "scale.js"
+    "scale.js",
+    "*.d.ts"
   ],
   "scripts": {
     "test": "node test.js"
@@ -40,5 +44,6 @@
     "type": "git",
     "url": "git+https://github.com/audiojs/note.git"
   },
-  "funding": "https://github.com/sponsors/audiojs"
+  "funding": "https://github.com/sponsors/audiojs",
+  "types": "./index.d.ts"
 }
