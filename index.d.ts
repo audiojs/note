@@ -9,7 +9,8 @@ export function cents(hz: number, options?: { a4?: number; flat?: boolean }): {
   midi: number; name: string; hz: number; cents: number
 }
 export type ScaleName = 'chromatic' | 'major' | 'minor' | 'harmonic-minor' | 'melodic-minor'
-  | 'pentatonic-major' | 'pentatonic-minor' | 'blues' | 'dorian' | 'mixolydian' | 'whole'
+  | 'pentatonic-major' | 'pentatonic-minor' | 'blues' | 'dorian' | 'phrygian' | 'lydian' | 'mixolydian' | 'locrian'
+  | 'whole'
 export const SCALES: Record<ScaleName, number[]>
 export interface SnapOptions { scale?: ScaleName | readonly number[]; root?: number }
 export function snapMidi(midi: number, options?: SnapOptions): number

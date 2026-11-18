@@ -43,3 +43,11 @@ test('scales — snap to degree, octave-aware, rooted', () => {
 	almost(snapHz(452, { scale: 'major', root: 9 }), 440, 1e-6, '452 Hz → A4 in A major')
 	is(snapMidi(60, { scale: 'chromatic' }), 60, 'chromatic is identity')
 })
+
+// The seven modern modes are one scale begun on each of its degrees: major (Ionian) on its 1st, dorian 2nd, phrygian
+// 3rd, lydian 4th, mixolydian 5th, minor (Aeolian) 6th, locrian 7th (https://en.wikipedia.org/wiki/Mode_(music)#Modern_modes)
+test('modes: the major scale begun on each of its degrees', () => {
+	const { major } = SCALES
+	;['major', 'dorian', 'phrygian', 'lydian', 'mixolydian', 'minor', 'locrian'].forEach((name, k) =>
+		is(SCALES[name].join(' '), major.map((_, i) => (major[(i + k) % 7] - major[k] + 12) % 12).join(' '), name))
+})
